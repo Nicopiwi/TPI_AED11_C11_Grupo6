@@ -64,3 +64,30 @@ TEST(laCasaEstaQuedandoChicaTEST, hacinamientoCriticoTodosIgualAUno) {
     }
 }
 
+TEST(laCasaEstaQuedandoChicaTEST, noHayHogarValido) {
+
+//                                                    Región\ +500 /Tipo
+//                                                       v  v  v
+    eph_h th = {{22114, 2020,   3,  319611, 629088, 3,  1,  1,  1,  3,  1,  2}};
+
+    eph_i ti = {{22114, 2020,   1,  0,  3,  1,  18, 0,  0,  20000,  10},
+                {22114, 2020,   2,  0,  3,  1,  18, 0,  0,  20000,  10},
+                {22114, 2020,   3,  0,  3,  1,  18, 0,  0,  20000,  10},
+                {22114, 2020,   4,  0,  3,  1,  18, 0,  0,  20000,  10}};
+
+    vector<pair<int,float>> esperado = {make_pair(1,0),
+                                        make_pair(40, 0),
+                                        make_pair(41, 0),
+                                        make_pair(42,0),
+                                        make_pair(43,0),
+                                        make_pair(44,0)};
+    vector<pair<int,float>> resultado = laCasaEstaQuedandoChica(th, ti);
+
+    int i=0;
+    while( i < 6 ) {
+        EXPECT_EQ( esperado[i].first, resultado[i].first );
+        EXPECT_EQ( true, flotante_valido(esperado[i].second, resultado[i].second, UMBRAL) );
+        i++;
+    }
+}
+
