@@ -5,11 +5,44 @@
 using namespace std;
 // Implementacion Problema 1
 bool esEncuestaValida ( eph_h th, eph_i ti ) {
-	bool resp = false;
+
+  if (!esMatrizEphh(th) || !esMatrizEphi(ti)) {
+    return false;
+  }
+
+  if (!alMenosUnHogarEnEphh(th) || !alMenosUnIndividuoEnEphi(ti)) {
+    return false;
+  }
+
+  if (!cantColumnasIgualACantEnTablaItem(th)) {
+    return false;
+  }
+
+  if (!noHayIndividuosSinHogarYViceversa(th, ti)) {
+    return false;
+  }
+
+  if (!noHayRepetidos(th, ti)) {
+    return false;
+  }
+
+  if (!mismoAnioYTrimestre(th, ti)) {
+    return false;
+  }
+
+  if (!cantMiembrosMenorIgualA20(th, ti)) {
+    return false;
+  }
+
+  if (!cantDeHabMayorQueCantParaDormir(th)) {
+    return false;
+  }
+
+  if (!valoresEnRangoH(th) || !valoresEnRangoI(ti)) {
+    return false;
+  }
 	
-	// TODO
-	
-	return resp;
+	return true;
 }
 
 // Implementacion Problema 2
