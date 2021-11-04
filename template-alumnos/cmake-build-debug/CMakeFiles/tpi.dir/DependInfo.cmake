@@ -8,21 +8,21 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/kovix/Documents/Algo I/TPI/template-alumnos/Funciones_TPI.cpp" "/home/kovix/Documents/Algo I/TPI/template-alumnos/cmake-build-debug/CMakeFiles/tpi.dir/Funciones_TPI.o"
-  "/home/kovix/Documents/Algo I/TPI/template-alumnos/auxiliares.cpp" "/home/kovix/Documents/Algo I/TPI/template-alumnos/cmake-build-debug/CMakeFiles/tpi.dir/auxiliares.o"
-  "/home/kovix/Documents/Algo I/TPI/template-alumnos/ejercicios.cpp" "/home/kovix/Documents/Algo I/TPI/template-alumnos/cmake-build-debug/CMakeFiles/tpi.dir/ejercicios.o"
-  "/home/kovix/Documents/Algo I/TPI/template-alumnos/main.cpp" "/home/kovix/Documents/Algo I/TPI/template-alumnos/cmake-build-debug/CMakeFiles/tpi.dir/main.o"
-  "/home/kovix/Documents/Algo I/TPI/template-alumnos/test/corregirRegionTEST.cpp" "/home/kovix/Documents/Algo I/TPI/template-alumnos/cmake-build-debug/CMakeFiles/tpi.dir/test/corregirRegionTEST.o"
-  "/home/kovix/Documents/Algo I/TPI/template-alumnos/test/costoSubsidioMejoraTEST.cpp" "/home/kovix/Documents/Algo I/TPI/template-alumnos/cmake-build-debug/CMakeFiles/tpi.dir/test/costoSubsidioMejoraTEST.o"
-  "/home/kovix/Documents/Algo I/TPI/template-alumnos/test/creceElTeleworkingEnCiudadesGrandesTEST.cpp" "/home/kovix/Documents/Algo I/TPI/template-alumnos/cmake-build-debug/CMakeFiles/tpi.dir/test/creceElTeleworkingEnCiudadesGrandesTEST.o"
-  "/home/kovix/Documents/Algo I/TPI/template-alumnos/test/esEncuestaValidaTEST.cpp" "/home/kovix/Documents/Algo I/TPI/template-alumnos/cmake-build-debug/CMakeFiles/tpi.dir/test/esEncuestaValidaTEST.o"
-  "/home/kovix/Documents/Algo I/TPI/template-alumnos/test/generarJoinTEST.cpp" "/home/kovix/Documents/Algo I/TPI/template-alumnos/cmake-build-debug/CMakeFiles/tpi.dir/test/generarJoinTEST.o"
-  "/home/kovix/Documents/Algo I/TPI/template-alumnos/test/histHabitacionalTEST.cpp" "/home/kovix/Documents/Algo I/TPI/template-alumnos/cmake-build-debug/CMakeFiles/tpi.dir/test/histHabitacionalTEST.o"
-  "/home/kovix/Documents/Algo I/TPI/template-alumnos/test/histogramaDeAnillosConcentricosTEST.cpp" "/home/kovix/Documents/Algo I/TPI/template-alumnos/cmake-build-debug/CMakeFiles/tpi.dir/test/histogramaDeAnillosConcentricosTEST.o"
-  "/home/kovix/Documents/Algo I/TPI/template-alumnos/test/laCasaEstaQuedandoChicaTEST.cpp" "/home/kovix/Documents/Algo I/TPI/template-alumnos/cmake-build-debug/CMakeFiles/tpi.dir/test/laCasaEstaQuedandoChicaTEST.o"
-  "/home/kovix/Documents/Algo I/TPI/template-alumnos/test/muestraHomogeneaTEST.cpp" "/home/kovix/Documents/Algo I/TPI/template-alumnos/cmake-build-debug/CMakeFiles/tpi.dir/test/muestraHomogeneaTEST.o"
-  "/home/kovix/Documents/Algo I/TPI/template-alumnos/test/ordenarRegionYCODUSUTEST.cpp" "/home/kovix/Documents/Algo I/TPI/template-alumnos/cmake-build-debug/CMakeFiles/tpi.dir/test/ordenarRegionYCODUSUTEST.o"
-  "/home/kovix/Documents/Algo I/TPI/template-alumnos/test/quitarIndividuosTEST.cpp" "/home/kovix/Documents/Algo I/TPI/template-alumnos/cmake-build-debug/CMakeFiles/tpi.dir/test/quitarIndividuosTEST.o"
+  "C:/Users/ignac/Escritorio/TPI_AED11_C11_Grupo6/template-alumnos/Funciones_TPI.cpp" "C:/Users/ignac/Escritorio/TPI_AED11_C11_Grupo6/template-alumnos/cmake-build-debug/CMakeFiles/tpi.dir/Funciones_TPI.obj"
+  "C:/Users/ignac/Escritorio/TPI_AED11_C11_Grupo6/template-alumnos/auxiliares.cpp" "C:/Users/ignac/Escritorio/TPI_AED11_C11_Grupo6/template-alumnos/cmake-build-debug/CMakeFiles/tpi.dir/auxiliares.obj"
+  "C:/Users/ignac/Escritorio/TPI_AED11_C11_Grupo6/template-alumnos/ejercicios.cpp" "C:/Users/ignac/Escritorio/TPI_AED11_C11_Grupo6/template-alumnos/cmake-build-debug/CMakeFiles/tpi.dir/ejercicios.obj"
+  "C:/Users/ignac/Escritorio/TPI_AED11_C11_Grupo6/template-alumnos/main.cpp" "C:/Users/ignac/Escritorio/TPI_AED11_C11_Grupo6/template-alumnos/cmake-build-debug/CMakeFiles/tpi.dir/main.obj"
+  "C:/Users/ignac/Escritorio/TPI_AED11_C11_Grupo6/template-alumnos/test/corregirRegionTEST.cpp" "C:/Users/ignac/Escritorio/TPI_AED11_C11_Grupo6/template-alumnos/cmake-build-debug/CMakeFiles/tpi.dir/test/corregirRegionTEST.obj"
+  "C:/Users/ignac/Escritorio/TPI_AED11_C11_Grupo6/template-alumnos/test/costoSubsidioMejoraTEST.cpp" "C:/Users/ignac/Escritorio/TPI_AED11_C11_Grupo6/template-alumnos/cmake-build-debug/CMakeFiles/tpi.dir/test/costoSubsidioMejoraTEST.obj"
+  "C:/Users/ignac/Escritorio/TPI_AED11_C11_Grupo6/template-alumnos/test/creceElTeleworkingEnCiudadesGrandesTEST.cpp" "C:/Users/ignac/Escritorio/TPI_AED11_C11_Grupo6/template-alumnos/cmake-build-debug/CMakeFiles/tpi.dir/test/creceElTeleworkingEnCiudadesGrandesTEST.obj"
+  "C:/Users/ignac/Escritorio/TPI_AED11_C11_Grupo6/template-alumnos/test/esEncuestaValidaTEST.cpp" "C:/Users/ignac/Escritorio/TPI_AED11_C11_Grupo6/template-alumnos/cmake-build-debug/CMakeFiles/tpi.dir/test/esEncuestaValidaTEST.obj"
+  "C:/Users/ignac/Escritorio/TPI_AED11_C11_Grupo6/template-alumnos/test/generarJoinTEST.cpp" "C:/Users/ignac/Escritorio/TPI_AED11_C11_Grupo6/template-alumnos/cmake-build-debug/CMakeFiles/tpi.dir/test/generarJoinTEST.obj"
+  "C:/Users/ignac/Escritorio/TPI_AED11_C11_Grupo6/template-alumnos/test/histHabitacionalTEST.cpp" "C:/Users/ignac/Escritorio/TPI_AED11_C11_Grupo6/template-alumnos/cmake-build-debug/CMakeFiles/tpi.dir/test/histHabitacionalTEST.obj"
+  "C:/Users/ignac/Escritorio/TPI_AED11_C11_Grupo6/template-alumnos/test/histogramaDeAnillosConcentricosTEST.cpp" "C:/Users/ignac/Escritorio/TPI_AED11_C11_Grupo6/template-alumnos/cmake-build-debug/CMakeFiles/tpi.dir/test/histogramaDeAnillosConcentricosTEST.obj"
+  "C:/Users/ignac/Escritorio/TPI_AED11_C11_Grupo6/template-alumnos/test/laCasaEstaQuedandoChicaTEST.cpp" "C:/Users/ignac/Escritorio/TPI_AED11_C11_Grupo6/template-alumnos/cmake-build-debug/CMakeFiles/tpi.dir/test/laCasaEstaQuedandoChicaTEST.obj"
+  "C:/Users/ignac/Escritorio/TPI_AED11_C11_Grupo6/template-alumnos/test/muestraHomogeneaTEST.cpp" "C:/Users/ignac/Escritorio/TPI_AED11_C11_Grupo6/template-alumnos/cmake-build-debug/CMakeFiles/tpi.dir/test/muestraHomogeneaTEST.obj"
+  "C:/Users/ignac/Escritorio/TPI_AED11_C11_Grupo6/template-alumnos/test/ordenarRegionYCODUSUTEST.cpp" "C:/Users/ignac/Escritorio/TPI_AED11_C11_Grupo6/template-alumnos/cmake-build-debug/CMakeFiles/tpi.dir/test/ordenarRegionYCODUSUTEST.obj"
+  "C:/Users/ignac/Escritorio/TPI_AED11_C11_Grupo6/template-alumnos/test/quitarIndividuosTEST.cpp" "C:/Users/ignac/Escritorio/TPI_AED11_C11_Grupo6/template-alumnos/cmake-build-debug/CMakeFiles/tpi.dir/test/quitarIndividuosTEST.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -37,8 +37,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/kovix/Documents/Algo I/TPI/template-alumnos/cmake-build-debug/lib/googletest-master/googlemock/gtest/CMakeFiles/gtest.dir/DependInfo.cmake"
-  "/home/kovix/Documents/Algo I/TPI/template-alumnos/cmake-build-debug/lib/googletest-master/googlemock/gtest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
+  "C:/Users/ignac/Escritorio/TPI_AED11_C11_Grupo6/template-alumnos/cmake-build-debug/lib/googletest-master/googlemock/gtest/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "C:/Users/ignac/Escritorio/TPI_AED11_C11_Grupo6/template-alumnos/cmake-build-debug/lib/googletest-master/googlemock/gtest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

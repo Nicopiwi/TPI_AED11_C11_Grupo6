@@ -252,7 +252,7 @@ bool esSuHogar(hogar h, individuo i){
     return h[HOGCODUSU] == i[INDCODUSU];
 }
 
-int cantHabitantes(hogar h, eph_i th){
+int cantHabitantes(hogar h, eph_i ti){
     int cantidad = 0;
     for (int i = 0; i < ti.size(); ++i) {
         if (esSuHogar(h, ti[i])){
