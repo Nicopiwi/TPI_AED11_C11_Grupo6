@@ -14,7 +14,7 @@ bool esEncuestaValida ( eph_h th, eph_i ti ) {
     return false;
   }
 
-  if (!cantColumnasIgualACantEnTablaItem(th)) {
+  if (!cantColumnasIgualACantEnTablaItem(th, ti)) {
     return false;
   }
 

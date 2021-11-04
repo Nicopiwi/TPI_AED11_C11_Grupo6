@@ -15,6 +15,33 @@ int cantHabitantes(hogar, eph_i);
 
 hogar buscarHogarPara(eph_h, individuo);
 
+
+//aux ej 1
+bool esMatrizEphh(eph_h th);
+
+bool esMatrizEphi(eph_i ti);
+
+bool alMenosUnHogarEnEphh(eph_h th);
+
+bool alMenosUnIndividuoEnEphi(eph_i ti);
+
+bool cantColumnasIgualACantEnTablaItem(eph_h th, eph_i ti);
+
+bool noHayIndividuosSinHogarYViceversa(eph_h th, eph_i ti);
+
+bool noHayRepetidos(eph_h th, eph_i ti);
+
+bool mismoAnioYTrimestre(eph_h th, eph_i ti);
+
+bool cantMiembrosMenorIgualA20(eph_h th, eph_i ti);
+
+bool cantDeHabMayorQueCantParaDormir(eph_h th);
+
+bool valoresEnRangoH(eph_h th);
+
+bool valoresEnRangoI(eph_i ti);
+
+
 //aux ej 2
 
 bool estaEnLaRegion(hogar, int);

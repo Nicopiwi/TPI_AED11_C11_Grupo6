@@ -50,7 +50,7 @@ bool noHayIndividuosSinHogarYViceversa(eph_h th, eph_i ti) {
         bool hogarEncontrado = false;
 
         for (int j = 0; j < ti.size(); ++j) {
-            if (ti[j][HOGCODUSU] == th[i][INDCODUSU]) {
+            if (ti[j][INDCODUSU] == th[i][HOGCODUSU]) {
                 hogarEncontrado = true;
                 break;
             }
@@ -89,7 +89,7 @@ bool noHayRepetidos(eph_h th, eph_i ti) {
     }
 
     for (int k = 0; k < ti.size(); ++k) {
-        for (int l = k + 1; j < ti.size(); ++l) {
+        for (int l = k + 1; l < ti.size(); ++l) {
             if (ti[k][INDCODUSU] == ti[l][INDCODUSU] && ti[k][COMPONENTE] == ti[l][COMPONENTE]) {
                 return false;
             }
@@ -135,7 +135,7 @@ bool cantMiembrosMenorIgualA20(eph_h th, eph_i ti) {
 
 bool cantDeHabMayorQueCantParaDormir(eph_h th) {
     for (int i = 0; i < th.size(); ++i) {
-        if (th[j][IV2] < th[i][II2]) {
+        if (th[i][IV2] < th[i][II2]) {
             return false;
         }
     }
@@ -153,7 +153,7 @@ bool valoresEnRangoH(eph_h th) {
             return false;
         }
 
-        if (th[i][TENENCIA] <= 0 || th[i][TENENCIA] > 3) {
+        if (th[i][II7] <= 0 || th[i][II7] > 3) { //tenencia
             return false;
         }
 
@@ -165,7 +165,7 @@ bool valoresEnRangoH(eph_h th) {
             return false;
         }
 
-        if (th[i][TIPO] <= 0 || th[i][TIPO] > 5) {
+        if (th[i][IV1] <= 0 || th[i][IV1] > 5) { //tipo
             return false;
         }
 
