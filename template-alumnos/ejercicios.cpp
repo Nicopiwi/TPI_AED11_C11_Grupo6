@@ -135,7 +135,7 @@ vector<hogar> muestraHomogenea (eph_h &th, eph_i &ti) {
 
     for (int i = 2; i < th.size(); ++i) {
       if (ingresos(th[i], ti) - ingresos(th[i - 1], ti) == difIngresosActual) {
-        secuenciaMasLargaActual.push(th[i]);
+        secuenciaMasLargaActual.push_back(th[i]);
       } else {
         if (secuenciaMasLargaActual.size() > secuenciaMasLarga.size()) {
           secuenciaMasLarga = secuenciaMasLargaActual;
