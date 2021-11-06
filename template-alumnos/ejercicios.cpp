@@ -64,7 +64,6 @@ vector < int > histHabitacional ( eph_h th, eph_i ti, int region ) {
 
 // Implementacion Problema 3
 vector< pair < int, float > > laCasaEstaQuedandoChica ( eph_h th, eph_i ti ) {
-
     vector<pair<int,float>> resp = {make_pair(1,-1.0),
                                         make_pair(40, -1.0),
                                         make_pair(41, -1.0),
@@ -75,29 +74,33 @@ vector< pair < int, float > > laCasaEstaQuedandoChica ( eph_h th, eph_i ti ) {
         resp[i].second = proporcionDeCasasConHC(th, ti, resp[i].first);
     }
 	
-  return resp;
+    return resp;
 }
 
 // Implementacion Problema 4
 bool creceElTeleworkingEnCiudadesGrandes ( eph_h t1h, eph_i t1i, eph_h t2h, eph_i t2i ) {
     bool resp = proporcionTeleworking(t2h, t2i) > proporcionTeleworking(t1h, t1i);
-  return  resp;
+    return resp;
 }
 
 // Implementacion Problema 5
-int costoSubsidioMejora( eph_h th, eph_i ti, int monto ){
-	int resp = -1;
+int costoSubsidioMejora( eph_h th, eph_i ti, int monto) {
+	int cantidadDeCasasCandidatas = 0;
+
+  for (int i = 0; i < th.size(); ++i) {
+    if (th[i][II7] == 1 && (cantHabitantes(th[i], ti) - 2 > th[i][II2])) {
+      cantidadDeCasasCandidatas++;
+    }
+  }
 	
-	// TODO
-	
-  return  resp;
+  return cantidadDeCasasCandidatas * monto;
 }
 
 // Implementacion Problema 6
 join_hi generarJoin( eph_h th, eph_i ti ){
     hogar h = {};
     individuo i = {};
-	join_hi resp = {};
+	  join_hi resp = {};
 
     for (int j = 0; j < th.size(); ++j) {
         h = th[j];
@@ -109,7 +112,7 @@ join_hi generarJoin( eph_h th, eph_i ti ){
         }
     }
 	
-  return  resp;
+    return  resp;
 }
 
 // Implementacion Problema 7
@@ -121,13 +124,33 @@ void ordenarRegionYCODUSU (eph_h & th, eph_i & ti) {
 }
 
 // Implementacion Problema 8
-vector < hogar > muestraHomogenea( eph_h & th, eph_i & ti ){
-    hogar h = {};
-    vector < hogar > resp = {h};
+vector<hogar> muestraHomogenea (eph_h &th, eph_i &ti) {
+    if (th.size() < 3) {
+      return {};
+    }
 
-    // TODO
+    vector<hogar> secuenciaMasLarga = {};
+    vector<hogar> secuenciaMasLargaActual = {th[0], th[1]};
+    int difIngresosActual = ingresos(th[1], ti) - ingresos(th[0], ti);
 
-    return  resp;
+    for (int i = 2; i < th.size(); ++i) {
+      if (ingresos(th[i], ti) - ingresos(th[i - 1], ti) == difIngresosActual) {
+        secuenciaMasLargaActual.push(th[i]);
+      } else {
+        if (secuenciaMasLargaActual.size() > secuenciaMasLarga.size()) {
+          secuenciaMasLarga = secuenciaMasLargaActual;
+        }
+
+        secuenciaMasLargaActual = {};
+        difIngresosActual = ingresos(th[i], ti) - ingresos(th[i - 1], ti);
+      }
+    }
+
+    if (secuenciaMasLargaActual.size() > secuenciaMasLarga.size()) {
+      secuenciaMasLarga = secuenciaMasLargaActual;
+    }
+
+    return secuenciaMasLarga.size() >= 3 ? secuenciaMasLarga : {};
 }
 
 // Implementacion Problema 9

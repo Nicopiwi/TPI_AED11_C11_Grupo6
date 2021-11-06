@@ -369,5 +369,17 @@ bool hogarEsDeCiudadGrande(hogar h){
     return h[MAS_500]==1;
 }
 
+//Auxiliares Ej. 8
+int ingresos(hogar h, eph_i ti) {
+    int ingresosTotales = 0;
+    for (int i = 0; i < ti.size(); ++i) {
+        if (ti[i][INDCODUSU] == h[HOGCODUSU] && ti[i][p47T] > -1) {
+            ingresosTotales += ti[i][p47T];
+        }
+    }
+
+    return ingresosTotales;
+}
+
 
 
