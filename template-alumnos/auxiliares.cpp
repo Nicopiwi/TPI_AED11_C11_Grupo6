@@ -381,5 +381,27 @@ int ingresos(hogar h, eph_i ti) {
     return ingresosTotales;
 }
 
+//Auxiliares Ej. 10
+int cantHogaresEnAnillo(int distDesde, int distHasta, pair<int, int> centro, eph_h th){
+    int cantidad = 0;
+    for (int i = 0; i < th.size(); ++i) {
+        if (hogarEnAnillo(distDesde, distHasta, centro, th[i])){
+            cantidad += 1;
+        }
+    }
+    return cantidad;
+}
+
+bool hogarEnAnillo(int distDesde, int distHasta, pair<int, int> centro, hogar h){
+    double dist = distanciaEuclideana(centro, h[HOGLATITUD], h[HOGLONGITUD]);
+    return (distDesde < dist) && (dist <= distHasta);
+}
+
+double distanciaEuclideana(pair<int, int> centro, int latitud, int longitud){
+    double dist = pow(centro.first - latitud, 2) + pow(centro.second - longitud, 2);
+    dist = sqrt(dist);
+    return dist;
+
+}
 
 
