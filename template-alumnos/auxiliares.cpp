@@ -424,11 +424,11 @@ bool cumpleCondicionBusqueda(vector<pair<int, dato>> busqueda, individuo ind){
 
 bool elHogarYaFueExcluido(hogar h, pair < eph_h, eph_i > excluidos){
     for (int j = 0; j < excluidos.first.size(); j++){
-        if (excluidos.first[j][HOGCODUSU] == h[HOGCODUSU]){
+        if (excluidos.first[j][HOGCODUSU] == h[HOGCODUSU]) {
             return true;
         }
-        return false;
     }
+    return false;
 }
 
 bool seDebeExcluirHogarDeOriginal(int codigoHogar, eph_i ti){

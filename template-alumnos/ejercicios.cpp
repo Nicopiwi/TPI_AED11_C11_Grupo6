@@ -190,12 +190,13 @@ pair < eph_h, eph_i > quitarIndividuos(eph_i & ti, eph_h & th, vector < pair < i
             //de i en el rango de [0, |s|)
             int hogarIndex = buscarIndiceHogarPara(th, ti[i]); //O(|s|)
             hogar suHogar = th[hogarIndex];
+            individuo ind = ti[i];
             resp.second.push_back(ti[i]);
             ti.erase(ti.begin()+i);
             if (seDebeExcluirHogarDeOriginal(suHogar[HOGCODUSU], ti)){
                 th.erase(th.begin()+hogarIndex);
             }
-            if(!elHogarYaFueExcluido(ti[i], resp)){
+            if(!elHogarYaFueExcluido(ind, resp)){
                 resp.first.push_back(suHogar);
             }
         }
