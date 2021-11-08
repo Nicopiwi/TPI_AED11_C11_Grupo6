@@ -3,6 +3,14 @@
 #include "gtest/gtest.h"
 #include "ejercicios.h"
 
+template <class T>
+bool contiene(T elem, vector<T> v){
+    for (int i = 0; i < v.size(); i++){
+        if (elem == v[i]) return true;
+    }
+    return false;
+}
+
 // Auxiliares ejercicio 1
 bool esMatrizEphh(eph_h th) {
     if (th.size() == 0 || th.size() == 1) {
@@ -262,12 +270,13 @@ int cantHabitantes(hogar h, eph_i ti){
     return cantidad;
 }
 
-hogar buscarHogarPara(eph_h th, individuo ind){
+
+int buscarIndiceHogarPara(eph_h th, individuo ind){
     int i = 0;
     while (i < th.size() && th[i][HOGCODUSU]!=ind[INDCODUSU]){
         ++i;
     }
-    return th[i];
+    return (i == th.size()) ? -1 : i;
 }
 
 //Auxiliares Ej. 2
@@ -331,7 +340,8 @@ float proporcionTeleworking(eph_h th, eph_i ti){
     float cantIndividuosTrabajandoEnSuVivienda = 0;
     float cantIndividuosQueTrabajan = 0;
     for (int i = 0; i < ti.size(); i++){
-        hogar suHogar = buscarHogarPara(th, ti[i]);
+        int hogarIndex = buscarIndiceHogarPara(th, ti[i]);
+        hogar suHogar = th[hogarIndex];
         bool condicionTrabaja = trabaja(ti[i])
                                 && esCasaODepartamento(suHogar)
                                 && hogarEsDeCiudadGrande(suHogar);
@@ -381,5 +391,28 @@ int ingresos(hogar h, eph_i ti) {
     return ingresosTotales;
 }
 
+//Auxiliares ej.11
+bool cumpleCondicionBusqueda(vector<pair<int, dato>> busqueda, individuo ind){
+    for (int j = 0; j < busqueda.size(); j++){
+        if(ind[busqueda[j].first]!=busqueda[j].second) return false;
+    }
+    return true;
+}
 
+
+bool elHogarYaFueExcluido(hogar h, pair < eph_h, eph_i > excluidos){
+    for (int j = 0; j < excluidos.first.size(); j++){
+        if (excluidos.first[j][HOGCODUSU] == h[HOGCODUSU]){
+            return true;
+        }
+        return false;
+    }
+}
+
+bool seDebeExcluirHogarDeOriginal(int codigoHogar, eph_i ti){
+    for (int i = 0; i < ti.size(); i++){
+        if (ti[i][INDCODUSU] == codigoHogar) return false;
+    }
+    return true;
+}
 

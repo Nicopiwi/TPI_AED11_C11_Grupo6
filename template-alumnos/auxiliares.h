@@ -3,6 +3,9 @@
 
 #include "definiciones.h"
 
+template <class T>
+bool contiene(T, vector<T>);
+
 bool esCasa(hogar);
 
 int qDormitorios();
@@ -13,7 +16,7 @@ bool esSuHogar(hogar, individuo);
 
 int cantHabitantes(hogar, eph_i);
 
-hogar buscarHogarPara(eph_h, individuo);
+int buscarIndiceHogarPara(eph_h, individuo);
 
 
 //aux ej 1
@@ -75,5 +78,15 @@ bool hogarEsDeCiudadGrande(hogar);
 bool esDepartamento(hogar);
 
 float proporcionTeleworking(eph_h, eph_i);
+
+int ingresos(hogar, eph_i);
+
+//Auxiliares 11
+
+bool cumpleCondicionBusqueda(vector<pair<int, dato>>, individuo);
+
+bool elHogarYaFueExcluido(hogar, pair < eph_h, eph_i >);
+
+bool seDebeExcluirHogarDeOriginal(int, eph_i);
 
 #endif //SOLUCION_AUXILIARES_H

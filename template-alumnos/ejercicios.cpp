@@ -150,13 +150,16 @@ vector<hogar> muestraHomogenea (eph_h &th, eph_i &ti) {
       secuenciaMasLarga = secuenciaMasLargaActual;
     }
 
-    return secuenciaMasLarga.size() >= 3 ? secuenciaMasLarga : {};
+    return (secuenciaMasLarga.size() >= 3) ? secuenciaMasLarga : vector<hogar>();
 }
 
 // Implementacion Problema 9
 void corregirRegion( eph_h & th, eph_i ti ) {
-	
-	// TODO
+    for (int i = 0; i < th.size(); i++){
+        if (th[i][REGION] == GBA){
+            th[i][REGION] = PAMPEANA;
+        }
+    }
 	
 	return;
 }
@@ -172,11 +175,30 @@ vector < int > histogramaDeAnillosConcentricos( eph_h th, eph_i ti, pair < int, 
 
 // Implementacion Problema 11
 pair < eph_h, eph_i > quitarIndividuos(eph_i & ti, eph_h & th, vector < pair < int, dato > >  busqueda ){
-    eph_h rth = {{-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1}};
-    eph_i rti = {{-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1}};
+    eph_h rth = {};
+    eph_i rti = {};
     pair < eph_h, eph_i > resp = make_pair(rth, rti);
-		
-	// TODO
+
+    int i = 0;
+    while (i < ti.size()){ //O(|s|)
+        if (cumpleCondicionBusqueda(busqueda, ti[i])){ //O(1)
+            // La invariante mantiene que EsEncuestaValida(th, ti) para valores
+            //de i en el rango de [0, |s|)
+            int hogarIndex = buscarIndiceHogarPara(th, ti[i]); //O(|s|)
+            hogar suHogar = th[hogarIndex];
+            resp.second.push_back(ti[i]);
+            ti.erase(ti.begin()+i);
+            if (seDebeExcluirHogarDeOriginal(suHogar[HOGCODUSU], ti)){
+                th.erase(th.begin()+hogarIndex);
+            }
+            if(!elHogarYaFueExcluido(ti[i], resp)){
+                resp.first.push_back(suHogar);
+            }
+        }
+        else{
+            i++;
+        }
+    }
 	
 	return resp;
 }
