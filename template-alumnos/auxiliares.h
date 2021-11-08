@@ -82,6 +82,8 @@ float proporcionTeleworking(eph_h, eph_i);
 //aux ej 8
 int ingresos(hogar h, eph_i ti);
 
+void ordenarPorIngresos(vector<hogar> &res, eph_i ti);
+
 //aux ej 10
 int cantHogaresEnAnillo(int distDesde, int distHasta, pair<int, int> centro, eph_h th);
 

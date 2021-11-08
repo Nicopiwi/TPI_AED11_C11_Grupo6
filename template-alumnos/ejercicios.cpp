@@ -130,25 +130,32 @@ vector<hogar> muestraHomogenea (eph_h &th, eph_i &ti) {
     }
 
     vector<hogar> secuenciaMasLarga = {};
-    vector<hogar> secuenciaMasLargaActual = {th[0], th[1]};
-    int difIngresosActual = ingresos(th[1], ti) - ingresos(th[0], ti);
+    vector<hogar> secuenciaMasLargaActual;
+    int difIngresosActual;
 
-    for (int i = 2; i < th.size(); ++i) {
-      if (ingresos(th[i], ti) - ingresos(th[i - 1], ti) == difIngresosActual) {
-        secuenciaMasLargaActual.push_back(th[i]);
-      } else {
-        if (secuenciaMasLargaActual.size() > secuenciaMasLarga.size()) {
-          secuenciaMasLarga = secuenciaMasLargaActual;
+    for (int i = 0; i < th.size() - 1; ++i) {
+        for (int j = i + 1; j < th.size() - 1; ++j) {
+            difIngresosActual = ingresos(th[j], ti) - ingresos(th[i], ti);
+            secuenciaMasLargaActual = {th[i],th[j]};
+            if (difIngresosActual == 0){
+                continue;
+            }
+            for (int k = 0; k < th.size(); ++k) {
+                if (k == i){
+                    continue;
+                }
+                if ((ingresos(th[k], ti) - ingresos(secuenciaMasLargaActual[secuenciaMasLargaActual.size() - 1], ti)) == difIngresosActual){
+                    secuenciaMasLargaActual.push_back(th[k]);
+                    k = 0;
+                }
+            }
+            if (secuenciaMasLargaActual.size() > secuenciaMasLarga.size()){
+                secuenciaMasLarga = secuenciaMasLargaActual;
+            }
         }
 
-        secuenciaMasLargaActual = {};
-        difIngresosActual = ingresos(th[i], ti) - ingresos(th[i - 1], ti);
-      }
     }
-
-    if (secuenciaMasLargaActual.size() > secuenciaMasLarga.size()) {
-      secuenciaMasLarga = secuenciaMasLargaActual;
-    }
+    ordenarPorIngresos(secuenciaMasLarga, ti);
 
     return (secuenciaMasLarga.size() >= 3) ? secuenciaMasLarga : vector<hogar>();
 }

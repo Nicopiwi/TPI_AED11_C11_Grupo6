@@ -391,6 +391,16 @@ int ingresos(hogar h, eph_i ti) {
     return ingresosTotales;
 }
 
+void ordenarPorIngresos(vector<hogar> &res, eph_i ti){
+    for (int i = 0; i < res.size(); ++i) {
+        for (int j = 0; j < res.size() - i - 1; ++j) {
+            if(ingresos(res[j], ti) > ingresos(res[j+1], ti)){
+                swap(res[j], res[j+1]);
+            }
+        }
+    }
+}
+
 //Auxiliares Ej. 10
 int cantHogaresEnAnillo(int distDesde, int distHasta, pair<int, int> centro, eph_h th){
     int cantidad = 0;
