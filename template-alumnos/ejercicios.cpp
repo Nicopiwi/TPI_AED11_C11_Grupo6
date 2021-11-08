@@ -166,11 +166,15 @@ void corregirRegion( eph_h & th, eph_i ti ) {
 
 // Implementacion Problema 10
 vector < int > histogramaDeAnillosConcentricos( eph_h th, eph_i ti, pair < int, int > centro, vector < int > distancias ){
-	vector < int > resp = {};
-	
-	// TODO
-	
-	return resp;
+    vector < int > resp = {};
+
+    resp.push_back(cantHogaresEnAnillo(0, distancias[0], centro, th));
+
+    for (int i = 0; i < distancias.size() - 1; ++i) {
+        resp.push_back(cantHogaresEnAnillo(distancias[i], distancias[i+1], centro, th));
+    }
+
+    return resp;
 }
 
 // Implementacion Problema 11
