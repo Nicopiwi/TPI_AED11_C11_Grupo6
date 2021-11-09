@@ -18,7 +18,11 @@
     <list default="true" id="f690bbe5-636a-4b00-a1ee-494ddcd3df00" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auxiliares.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/auxiliares.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auxiliares.h" beforeDir="false" afterPath="$PROJECT_DIR$/auxiliares.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/definiciones.h" beforeDir="false" afterPath="$PROJECT_DIR$/definiciones.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ejercicios.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ejercicios.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/creceElTeleworkingEnCiudadesGrandesTEST.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/creceElTeleworkingEnCiudadesGrandesTEST.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/histHabitacionalTEST.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/histHabitacionalTEST.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tpi" beforeDir="false" afterPath="$PROJECT_DIR$/tpi" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,20 +51,34 @@
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="cmake.loaded.for.project" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Google Test.quitarIndividuosTEST.SacaUnIndividuo">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="quitarIndividuosTEST.SacaTodosIndividuos" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tpi" TARGET_NAME="tpi" RUN_TARGET_PROJECT_NAME="tpi" RUN_TARGET_NAME="tpi" TEST_CLASS="quitarIndividuosTEST" TEST_METHOD="SacaTodosIndividuos" TEST_MODE="SUITE_TEST">
+  <component name="RunManager" selected="Google Test.creceElTeleworkingEnCiudadesGrandesTEST.seMantieneYEn0">
+    <configuration name="creceElTeleworkingEnCiudadesGrandesTEST.seMantieneYEn0" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tpi" TARGET_NAME="tpi" RUN_TARGET_PROJECT_NAME="tpi" RUN_TARGET_NAME="tpi" TEST_CLASS="creceElTeleworkingEnCiudadesGrandesTEST" TEST_METHOD="seMantieneYEn0" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="quitarIndividuosTEST.SacaUnIndividuo" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tpi" TARGET_NAME="tpi" RUN_TARGET_PROJECT_NAME="tpi" RUN_TARGET_NAME="tpi" TEST_CLASS="quitarIndividuosTEST" TEST_METHOD="SacaUnIndividuo" TEST_MODE="SUITE_TEST">
+    <configuration name="histHabitacionalTEST.eph2020_CUYO" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tpi" TARGET_NAME="tpi" RUN_TARGET_PROJECT_NAME="tpi" RUN_TARGET_NAME="tpi" TEST_CLASS="histHabitacionalTEST" TEST_METHOD="eph2020_CUYO" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="histHabitacionalTEST.eph2020_PAMPA" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tpi" TARGET_NAME="tpi" RUN_TARGET_PROJECT_NAME="tpi" RUN_TARGET_NAME="tpi" TEST_CLASS="histHabitacionalTEST" TEST_METHOD="eph2020_PAMPA" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="histHabitacionalTEST.eph2020_PATAGONIA" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tpi" TARGET_NAME="tpi" RUN_TARGET_PROJECT_NAME="tpi" RUN_TARGET_NAME="tpi" TEST_CLASS="histHabitacionalTEST" TEST_METHOD="eph2020_PATAGONIA" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="histHabitacionalTEST.noContieneCasasEnRegion" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tpi" TARGET_NAME="tpi" RUN_TARGET_PROJECT_NAME="tpi" RUN_TARGET_NAME="tpi" TEST_CLASS="histHabitacionalTEST" TEST_METHOD="noContieneCasasEnRegion" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
@@ -70,6 +88,11 @@
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="gmock" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tpi" TARGET_NAME="gmock" CONFIG_NAME="Debug">
@@ -92,24 +115,25 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="CMake Application.gmock" />
       <item itemvalue="CMake Application.gmock_main" />
       <item itemvalue="CMake Application.gtest" />
       <item itemvalue="CMake Application.gtest_main" />
       <item itemvalue="Google Test.tpi" />
-      <item itemvalue="Google Test.quitarIndividuosTEST.SacaTodosIndividuos" />
-      <item itemvalue="Google Test.quitarIndividuosTEST.SacaUnIndividuo" />
+      <item itemvalue="Google Test.histHabitacionalTEST.eph2020_PAMPA" />
+      <item itemvalue="Google Test.histHabitacionalTEST.eph2020_CUYO" />
+      <item itemvalue="Google Test.histHabitacionalTEST.eph2020_PATAGONIA" />
+      <item itemvalue="Google Test.histHabitacionalTEST.noContieneCasasEnRegion" />
+      <item itemvalue="Google Test.creceElTeleworkingEnCiudadesGrandesTEST.seMantieneYEn0" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Google Test.quitarIndividuosTEST.SacaUnIndividuo" />
-        <item itemvalue="Google Test.quitarIndividuosTEST.SacaTodosIndividuos" />
+        <item itemvalue="Google Test.creceElTeleworkingEnCiudadesGrandesTEST.seMantieneYEn0" />
+        <item itemvalue="Google Test.histHabitacionalTEST.noContieneCasasEnRegion" />
+        <item itemvalue="Google Test.histHabitacionalTEST.eph2020_CUYO" />
+        <item itemvalue="Google Test.histHabitacionalTEST.eph2020_PATAGONIA" />
+        <item itemvalue="Google Test.histHabitacionalTEST.eph2020_PAMPA" />
       </list>
     </recent_temporary>
   </component>
@@ -121,7 +145,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1636311570029</updated>
-      <workItem from="1636311571135" duration="18434000" />
+      <workItem from="1636311571135" duration="19091000" />
+      <workItem from="1636415852317" duration="158000" />
+      <workItem from="1636416038208" duration="8351000" />
+      <workItem from="1636479138828" duration="1545000" />
     </task>
     <servers />
   </component>
@@ -138,18 +165,19 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/ejercicios.cpp</url>
-          <line>183</line>
+          <line>190</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/auxiliares.cpp</url>
-          <line>425</line>
+          <line>423</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>

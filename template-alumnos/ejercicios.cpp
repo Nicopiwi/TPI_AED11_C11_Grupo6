@@ -163,7 +163,7 @@ vector<hogar> muestraHomogenea (eph_h &th, eph_i &ti) {
 // Implementacion Problema 9
 void corregirRegion( eph_h & th, eph_i ti ) {
     for (int i = 0; i < th.size(); i++){
-        if (th[i][REGION] == GBA){
+        if (estaEnLaRegion(th[i], GBA)){
             th[i][REGION] = PAMPEANA;
         }
     }
@@ -200,10 +200,10 @@ pair < eph_h, eph_i > quitarIndividuos(eph_i & ti, eph_h & th, vector < pair < i
             individuo ind = ti[i];
             resp.second.push_back(ti[i]);
             ti.erase(ti.begin()+i);
-            if (seDebeExcluirHogarDeOriginal(suHogar[HOGCODUSU], ti)){
+            if (noHayIndividuoParaHogar(suHogar[HOGCODUSU], ti)){
                 th.erase(th.begin()+hogarIndex);
             }
-            if(!elHogarYaFueExcluido(ind, resp)){
+            if(!elHogarYaFueExcluido(suHogar, resp)){
                 resp.first.push_back(suHogar);
             }
         }

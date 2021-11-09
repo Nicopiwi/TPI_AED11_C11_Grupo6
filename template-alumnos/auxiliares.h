@@ -8,10 +8,6 @@ bool contiene(T, vector<T>);
 
 bool esCasa(hogar);
 
-int qDormitorios();
-
-int qHabitaciones();
-
 bool esSuHogar(hogar, individuo);
 
 int cantHabitantes(hogar, eph_i);
@@ -100,6 +96,6 @@ bool cumpleCondicionBusqueda(vector<pair<int, dato>>, individuo);
 
 bool elHogarYaFueExcluido(hogar, pair < eph_h, eph_i >);
 
-bool seDebeExcluirHogarDeOriginal(int, eph_i);
+bool noHayIndividuoParaHogar(int, eph_i);
 
 #endif //SOLUCION_AUXILIARES_H

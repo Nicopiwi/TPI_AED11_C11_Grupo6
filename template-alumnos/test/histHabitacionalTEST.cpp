@@ -50,7 +50,6 @@ TEST(histHabitacionalTEST, vectorLargo4) {
         EXPECT_EQ( resultado_esperado, histHabitacional(th, ti, 41) );
     }
 
-
 }
 
 TEST(histHabitacionalTEST, eph2020_CUYO) {

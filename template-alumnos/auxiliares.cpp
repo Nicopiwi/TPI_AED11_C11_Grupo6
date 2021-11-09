@@ -11,6 +11,33 @@ bool contiene(T elem, vector<T> v){
     return false;
 }
 
+bool esCasa(hogar h){
+    return h[IV1] == CASA;
+}
+
+bool esSuHogar(hogar h, individuo i){
+    return h[HOGCODUSU] == i[INDCODUSU];
+}
+
+int cantHabitantes(hogar h, eph_i ti){
+    int cantidad = 0;
+    for (int i = 0; i < ti.size(); ++i) {
+        if (esSuHogar(h, ti[i])){
+            cantidad += 1;
+        }
+    }
+    return cantidad;
+}
+
+
+int buscarIndiceHogarPara(eph_h th, individuo ind){
+    int i = 0;
+    while (i < th.size() && th[i][HOGCODUSU]!=ind[INDCODUSU]){
+        ++i;
+    }
+    return (i == th.size()) ? -1 : i;
+}
+
 // Auxiliares ejercicio 1
 bool esMatrizEphh(eph_h th) {
     if (th.size() == 0 || th.size() == 1) {
@@ -240,56 +267,17 @@ bool valoresEnRangoI(eph_i ti) {
     return true;
 }
 
-bool esCasa(hogar h){
-    return h[IV1] == 1;
-}
-
-int qDormitorios(){
-    return II2;
-}
-
-int qHabitaciones(){
-    return IV2;
-}
-
-int region(){
-    return REGION;
-}
-
-bool esSuHogar(hogar h, individuo i){
-    return h[HOGCODUSU] == i[INDCODUSU];
-}
-
-int cantHabitantes(hogar h, eph_i ti){
-    int cantidad = 0;
-    for (int i = 0; i < ti.size(); ++i) {
-        if (esSuHogar(h, ti[i])){
-            cantidad += 1;
-        }
-    }
-    return cantidad;
-}
-
-
-int buscarIndiceHogarPara(eph_h th, individuo ind){
-    int i = 0;
-    while (i < th.size() && th[i][HOGCODUSU]!=ind[INDCODUSU]){
-        ++i;
-    }
-    return (i == th.size()) ? -1 : i;
-}
-
 //Auxiliares Ej. 2
 
 bool estaEnLaRegion(hogar h, int r){
-    return h[region()] == r;
+    return h[REGION] == r;
 }
 
 int maxCantHabitacionesEnRegion(eph_h th, int region){
-    int max = 1;
-    for (int i = 1; i < th.size(); i++){
-        int habitaciones = th[i][qHabitaciones()];
-        if (estaEnLaRegion(th[i], region) && habitaciones>max){
+    int max = 0;
+    for (int i = 0; i < th.size(); i++){
+        int habitaciones = th[i][IV2];
+        if (estaEnLaRegion(th[i], region) && habitaciones > max){
             max = habitaciones;
         }
     }
@@ -331,7 +319,7 @@ int cantHogaresValidos(eph_h th, int region){
 }
 
 bool hogarConHacinamientoCritico(hogar h, eph_i ti){
-    return cantHabitantes(h, ti) > (3 * h[qDormitorios()]);
+    return cantHabitantes(h, ti) > (3 * h[II2]);
 }
 
 //Auxiliares Ej. 4
@@ -356,7 +344,7 @@ float proporcionTeleworking(eph_h th, eph_i ti){
 }
 
 bool esDepartamento(hogar h){
-    return h[IV1] == 2;
+    return h[IV1] == DEPARTAMENTO;
 }
 
 bool esCasaODepartamento(hogar h){
@@ -364,7 +352,7 @@ bool esCasaODepartamento(hogar h){
 }
 
 bool realizaSusTareasEnEsteHogar(individuo i){
-    return i[PP04G]==6;
+    return i[PP04G] == EN_ESTE_HOGAR;
 }
 
 bool tieneEspaciosReservadosParaElTrabajo(individuo i){
@@ -372,7 +360,7 @@ bool tieneEspaciosReservadosParaElTrabajo(individuo i){
 }
 
 bool trabaja(individuo i){
-    return i[ESTADO]==1;
+    return i[ESTADO]==OCUPADO;
 }
 
 bool hogarEsDeCiudadGrande(hogar h){
@@ -441,7 +429,7 @@ bool elHogarYaFueExcluido(hogar h, pair < eph_h, eph_i > excluidos){
     return false;
 }
 
-bool seDebeExcluirHogarDeOriginal(int codigoHogar, eph_i ti){
+bool noHayIndividuoParaHogar(int codigoHogar, eph_i ti){
     for (int i = 0; i < ti.size(); i++){
         if (ti[i][INDCODUSU] == codigoHogar) return false;
     }
