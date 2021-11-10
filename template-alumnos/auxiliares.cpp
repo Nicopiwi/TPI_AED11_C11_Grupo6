@@ -100,7 +100,7 @@ bool noHayIndividuosSinHogarYViceversa(eph_h th, eph_i ti) {
         bool individuoEncontrado = false;
 
         for (int l = 0; l < th.size(); ++l) {
-            if (ti[l][INDCODUSU] == th[k][HOGCODUSU]) {
+            if (ti[k][INDCODUSU] == th[l][HOGCODUSU]) { // en esta linea el orden de los indices estaban mal. Aca esta corregido
                 individuoEncontrado = true;
                 break;
             }
