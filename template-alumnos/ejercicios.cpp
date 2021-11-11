@@ -6,11 +6,11 @@ using namespace std;
 // Implementacion Problema 1
 bool esEncuestaValida ( eph_h th, eph_i ti ) {
 
-  if (!esMatrizEphh(th) || !esMatrizEphi(ti)) {
+  if (!esMatriz(th) || !esMatriz(ti)) {
     return false;
   }
 
-  if (!alMenosUnHogarEnEphh(th) || !alMenosUnIndividuoEnEphi(ti)) {
+  if (!alMenosUnaFila(th) || !alMenosUnaFila(ti)) {
     return false;
   }
 

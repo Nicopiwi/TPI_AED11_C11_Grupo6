@@ -16,11 +16,9 @@ int buscarIndiceHogarPara(eph_h, individuo);
 
 
 //aux ej 1
-bool esMatrizEphh(eph_h th);
+bool esMatriz(vector<vector<int>>);
 
-bool esMatrizEphi(eph_i ti);
-
-bool alMenosUnHogarEnEphh(eph_h th);
+bool alMenosUnaFila(vector<vector<int>>);
 
 bool alMenosUnIndividuoEnEphi(eph_i ti);
 

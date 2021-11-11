@@ -3,14 +3,6 @@
 #include "gtest/gtest.h"
 #include "ejercicios.h"
 
-template <class T>
-bool contiene(T elem, vector<T> v){
-    for (int i = 0; i < v.size(); i++){
-        if (elem == v[i]) return true;
-    }
-    return false;
-}
-
 bool esCasa(hogar h){
     return h[IV1] == CASA;
 }
@@ -38,9 +30,9 @@ int buscarIndiceHogarPara(eph_h th, individuo ind){
 }
 
 // Auxiliares ejercicio 1
-bool esMatrizEphh(eph_h th) {
-    for (int i = 1; i < th.size(); ++i) {
-        if (th[i].size() != th[0].size()) {
+bool esMatriz(vector<vector<int>> m) {
+    for (int i = 1; i < m.size(); ++i) {
+        if (m[i].size() != m[0].size()) {
             return false;
         }
     }
@@ -48,22 +40,8 @@ bool esMatrizEphh(eph_h th) {
     return true;
 }
 
-bool esMatrizEphi(eph_i ti) {
-    for (int i = 1; i < ti.size(); ++i) {
-        if (ti[i].size() != ti[0].size()) {
-            return false;
-        }
-    }
-
-    return true;
-}
-
-bool alMenosUnHogarEnEphh(eph_h th) {
-    return th.size() > 0;
-}
-
-bool alMenosUnIndividuoEnEphi(eph_i ti) {
-    return ti.size() > 0;
+bool alMenosUnaFila(vector<vector<int>> m) {
+    return m.size() > 0;
 }
 
 bool cantColumnasIgualACantEnTablaItem(eph_h th, eph_i ti) {

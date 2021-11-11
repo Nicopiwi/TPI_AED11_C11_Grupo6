@@ -260,3 +260,18 @@ TEST(esEncuestaValidaTEST, invalidaMayorA20MiembrosEnElHogar) {
     EXPECT_FALSE(esEncuestaValida(th, ti));
 }
 
+TEST(esEncuestaValidaTEST, invalidaCantDeHabMayorQueCantDormir) {
+    eph_h th = {{22114, 2020,   3,  319611, 629088, 3,  41, 0,  1,  1,  3,  2}};
+    eph_i ti = {{22114, 2020,   1,  0,  3,  1,  31, 1,  3,  59000,  10}};
+
+    EXPECT_FALSE(esEncuestaValida(th, ti));
+}
+
+TEST(esEncuestaValidaTEST, invalidaRangoCatOcupInvalido) {
+    //
+    eph_h th = {{22114, 2020,   3,  319611, 629088, 3,  41, 0,  1,  3,  1,  2}};
+    eph_i ti = {{22114, 2020,   1,  0,  3,  1,  31, 1,  -2,  59000,  10}};
+    //                                                  CatOcup
+    EXPECT_FALSE(esEncuestaValida(th, ti));
+}
+
