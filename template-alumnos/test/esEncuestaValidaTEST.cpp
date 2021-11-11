@@ -207,3 +207,56 @@ TEST(esEncuestaValidaTEST, validaeph2020_100) {
     EXPECT_TRUE(  esEncuestaValida(th, ti) );
 }
 
+// Tests adicionales
+
+TEST(esEncuestaValidaTEST, invalidaNoEsMatrizEphh) {
+
+    eph_h th = {{22114, -2020,   3,  319611, 629088, 3,  41, 0,  1,  3,  1,  2},
+                {22115, -2020,   3,  319611, 629088, 3,  41, 0,  1,  3,  1}};
+
+    eph_i ti = {};
+
+    EXPECT_FALSE(esEncuestaValida(th, ti));
+}
+
+TEST(esEncuestaValidaTEST, invalidaNoEsMatrizEphi) {
+
+    eph_h th = {};
+
+    eph_i ti = {{22114, -2020,   1,  0,  3,  1,  18, 0,  0,  20000,  10},
+                {22115, -2020,   1,  0,  3,  1,  18, 0,  0,  20000}};
+
+    EXPECT_FALSE(esEncuestaValida(th, ti));
+}
+
+TEST(esEncuestaValidaTEST, invalidaSinIndividuos) {
+
+    eph_h th = {{22114, -2020,   3,  319611, 629088, 3,  41, 0,  1,  3,  1,  2}};
+    eph_i ti = {};
+
+    EXPECT_FALSE(esEncuestaValida(th, ti));
+}
+
+TEST(esEncuestaValidaTEST, invalidaHogaresSinIndividuos) {
+    eph_h th = {{22114, 2020,   3,  319611, 629088, 3,  41, 0,  1,  3,  1,  2},
+                {20957, 2020,   3,  313965, 623297, 1,  43, 0,  1,  3,  1,  2}};
+    eph_i ti = {{22866, 2020,   1,  0,  3,  1,  31, 1,  3,  59000,  10},
+                {22866, 2020,   2,  1,  3,  2,  28, 1,  3,  0,      6},
+                {22114, 2020,   1,  0,  3,  1,  18, 0,  0,  20000,  10}};
+
+    EXPECT_FALSE(esEncuestaValida(th, ti));
+}
+
+TEST(esEncuestaValidaTEST, invalidaMayorA20MiembrosEnElHogar) {
+    eph_h th = {{22114, 2020,   3,  319611, 629088, 3,  41, 0,  1,  3,  1,  2}};
+    eph_i ti;
+
+    for (int i = 1; i <= 21; i++) {
+        individuo individuo_actual = {22114, 2020,   1,  0,  3,  1,  18, 0,  0,  20000,  10};
+        individuo_actual[COMPONENTE] = i;
+        ti.push_back(individuo_actual);
+    }
+
+    EXPECT_FALSE(esEncuestaValida(th, ti));
+}
+

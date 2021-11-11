@@ -39,10 +39,6 @@ int buscarIndiceHogarPara(eph_h th, individuo ind){
 
 // Auxiliares ejercicio 1
 bool esMatrizEphh(eph_h th) {
-    if (th.size() == 0 || th.size() == 1) {
-        return true;
-    }
-
     for (int i = 1; i < th.size(); ++i) {
         if (th[i].size() != th[0].size()) {
             return false;
@@ -53,10 +49,6 @@ bool esMatrizEphh(eph_h th) {
 }
 
 bool esMatrizEphi(eph_i ti) {
-    if (ti.size() == 0 || ti.size() == 1) {
-        return true;
-    }
-
     for (int i = 1; i < ti.size(); ++i) {
         if (ti[i].size() != ti[0].size()) {
             return false;
@@ -179,39 +171,18 @@ bool cantDeHabMayorQueCantParaDormir(eph_h th) {
 
 bool valoresEnRangoH(eph_h th) {
     for (int i = 0; i < th.size(); ++i) {
-        if (th[i][HOGCODUSU] <= 0) {
-            return false;
-        }
+        bool hogcodusuInvalido = th[i][HOGCODUSU] <= 0;
+        bool hogtrimestreInvalido = th[i][HOGTRIMESTRE] <= 0 || th[i][HOGTRIMESTRE] > 4;
+        bool tenenciaInvalido = th[i][II7] <= 0 || th[i][II7] > 3;
+        bool regionInvalido = (th[i][REGION] < 40 || th[i][REGION] > 44) && th[i][REGION] != 1;
+        bool mas500Invalido = th[i][MAS_500] != 0 && th[i][MAS_500] != 1;
+        bool tipoInvalido = th[i][IV1] <= 0 || th[i][IV1] > 5;
+        bool cantHabitInvalido = th[i][IV2] <= 0;
+        bool cantDormInvalido = th[i][II2] <= 0;
+        bool cantHabParaTrabajoInvalido = th[i][II3] != 1 && th[i][II3] != 2;
 
-        if (th[i][HOGTRIMESTRE] <= 0 || th[i][HOGTRIMESTRE] > 4) {
-            return false;
-        }
-
-        if (th[i][II7] <= 0 || th[i][II7] > 3) { //tenencia
-            return false;
-        }
-
-        if ((th[i][REGION] < 40 || th[i][REGION] > 44) && th[i][REGION] != 1) {
-            return false;
-        }
-
-        if (th[i][MAS_500] != 0 && th[i][MAS_500] != 1) {
-            return false;
-        }
-
-        if (th[i][IV1] <= 0 || th[i][IV1] > 5) { //tipo
-            return false;
-        }
-
-        if (th[i][IV2] <= 0) {
-            return false;
-        }
-
-        if (th[i][II2] <= 0) {
-            return false;
-        }
-
-        if (th[i][II3] != 1 && th[i][II3] != 2) {
+        if (hogcodusuInvalido || hogtrimestreInvalido || tenenciaInvalido || regionInvalido || mas500Invalido ||
+            tipoInvalido || cantHabitInvalido || cantDormInvalido || cantHabParaTrabajoInvalido) {
             return false;
         }
     }
@@ -221,46 +192,21 @@ bool valoresEnRangoH(eph_h th) {
 
 bool valoresEnRangoI(eph_i ti) {
     for (int i = 0; i < ti.size(); ++i) {
-        if (ti[i][INDCODUSU] <= 0) {
+        bool indcodusuInvalido = ti[i][INDCODUSU] <= 0;
+        bool componenteInvalido = ti[i][COMPONENTE] <= 0;
+        bool indtrimestreInvalido = ti[i][INDTRIMESTRE] <= 0 || ti[i][INDTRIMESTRE] > 4;
+        bool ch4Invalido = ti[i][CH4] != 1 && ti[i][CH4] != 2;
+        bool ch6Invalido = ti[i][CH6] < 0;
+        bool nivelEdInvalido = ti[i][NIVEL_ED] != 0 && ti[i][NIVEL_ED] != 1;
+        bool estadoInvalido = ti[i][ESTADO] < -1 || ti[i][ESTADO] > 1;
+        bool catOcupInvalido = ti[i][CAT_OCUP] < 0 || ti[i][CAT_OCUP] > 4;
+        bool p47TInvalido = ti[i][p47T] < -1;
+        bool PP04GInvalido = ti[i][PP04G] < 0 || ti[i][PP04G] > 10;
+
+        if (indcodusuInvalido || componenteInvalido || indtrimestreInvalido || ch4Invalido || ch6Invalido ||
+            nivelEdInvalido || estadoInvalido || catOcupInvalido || p47TInvalido || PP04GInvalido) {
             return false;
         }
-
-        if (ti[i][COMPONENTE] <= 0) {
-            return false;
-        }
-
-        if (ti[i][INDTRIMESTRE] <= 0 || ti[i][INDTRIMESTRE] > 4) {
-            return false;
-        }
-
-        if (ti[i][CH4] != 1 && ti[i][CH4] != 2) {
-            return false;
-        }
-
-        if (ti[i][CH6] < 0) {
-            return false;
-        }
-
-        if (ti[i][NIVEL_ED] != 0 && ti[i][NIVEL_ED] != 1) {
-            return false;
-        }
-
-        if (ti[i][ESTADO] < -1 || ti[i][NIVEL_ED] > 1) {
-            return false;
-        }
-
-        if (ti[i][CAT_OCUP] < 0 || ti[i][CAT_OCUP] > 4) {
-            return false;
-        }
-
-        if (ti[i][p47T] < -1) {
-            return false;
-        }
-
-        if (ti[i][PP04G] < 0 || ti[i][PP04G] > 10) {
-            return false;
-        }
-
     }
 
     return true;
