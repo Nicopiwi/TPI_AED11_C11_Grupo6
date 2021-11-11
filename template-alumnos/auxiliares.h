@@ -75,6 +75,11 @@ bool esDepartamento(hogar);
 
 float proporcionTeleworking(eph_h, eph_i);
 
+//aux ej 7
+void swapHogar(vector<hogar> &th, int a, int b);
+
+void swapIndividuo(vector<individuo> &ti, int a, int b);
+
 //aux ej 8
 int ingresos(hogar h, eph_i ti);
 
@@ -86,9 +91,6 @@ int cantHogaresEnAnillo(int distDesde, int distHasta, pair<int, int> centro, eph
 bool hogarEnAnillo(int distDesde, int distHasta, pair<int, int> centro, hogar h);
 
 double distanciaEuclideana(pair<int, int> centro, int latitud, int longitud);
-
-
-int ingresos(hogar, eph_i);
 
 //Auxiliares 11
 

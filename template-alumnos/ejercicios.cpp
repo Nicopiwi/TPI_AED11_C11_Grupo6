@@ -122,31 +122,37 @@ void ordenarRegionYCODUSU (eph_h & th, eph_i & ti) {
         int menorFila = i;
 
         for (int j = i + 1; j < th.size(); ++j) {
-            if ((th[j][REGION] < th[menorFila][REGION]) ||
-                (th[j][REGION] == th[menorFila][REGION] && th[j][HOGCODUSU] < th[menorFila][HOGCODUSU])) {
+            bool esMenor = (th[j][REGION] < th[menorFila][REGION]) ||
+                           (th[j][REGION] == th[menorFila][REGION] && th[j][HOGCODUSU] < th[menorFila][HOGCODUSU]);
+            if (esMenor) {
                 menorFila = j;
             }
         }
 
-        hogar temp = th[i];
-        th[i] = th[menorFila];
-        th[menorFila] = temp;
+        swapHogar(th, i, menorFila);
     }
 
-    for (int k = 0; k < th.size(); ++k) {
-        for (int l = 0; l < ti.size(); ++l) {
-            int menorIndividuo = l;
+    int hogarActual = 0;
+    for (int l = 0; l < ti.size(); ++l) {
+        int menorIndividuo = l;
 
-            for (int m = l + 1; m < ti.size(); ++m) {
-                if ((ti[l][INDCODUSU] == th[k][HOGCODUSU]) &&
-                    (menorIndividuo == -1 || ti[menorIndividuo][COMPONENTE] < ti[menorIndividuo][COMPONENTE])) {
-                    menorIndividuo = m;
-                }
+        for (int m = l + 1; m < ti.size(); ++m) {
+            bool tieneCodusuHogarYMenorComponente = (ti[m][INDCODUSU] == th[hogarActual][HOGCODUSU]) &&
+                    (ti[menorIndividuo][INDCODUSU] != th[hogarActual][HOGCODUSU] ||
+                     ti[m][COMPONENTE] < ti[menorIndividuo][COMPONENTE]);
+
+            if (tieneCodusuHogarYMenorComponente) {
+                menorIndividuo = m;
             }
+        }
 
-            individuo temp = ti[l];
-            ti[l] = ti[menorIndividuo];
-            ti[menorIndividuo] = temp;
+        bool noHayIndConCodusu = menorIndividuo == l && ti[menorIndividuo][INDCODUSU] != th[hogarActual][HOGCODUSU];
+
+        if (noHayIndConCodusu) {
+            l--;
+            hogarActual++;
+        } else {
+            swapIndividuo(ti, l, menorIndividuo);
         }
     }
 

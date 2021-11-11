@@ -29,7 +29,6 @@ int cantHabitantes(hogar h, eph_i ti){
     return cantidad;
 }
 
-
 int buscarIndiceHogarPara(eph_h th, individuo ind){
     int i = 0;
     while (i < th.size() && th[i][HOGCODUSU]!=ind[INDCODUSU]){
@@ -100,7 +99,7 @@ bool noHayIndividuosSinHogarYViceversa(eph_h th, eph_i ti) {
         bool individuoEncontrado = false;
 
         for (int l = 0; l < th.size(); ++l) {
-            if (ti[k][INDCODUSU] == th[l][HOGCODUSU]) { // en esta linea el orden de los indices estaban mal. Aca esta corregido
+            if (ti[k][INDCODUSU] == th[l][HOGCODUSU]) {
                 individuoEncontrado = true;
                 break;
             }
@@ -136,13 +135,13 @@ bool noHayRepetidos(eph_h th, eph_i ti) {
 
 bool mismoAnioYTrimestre(eph_h th, eph_i ti) {
     for (int i = 0; i < th.size(); ++i) {
-        if (th[i][HOGANIO] != th[0][HOGANIO] && th[i][HOGTRIMESTRE] != th[0][HOGTRIMESTRE]) {
+        if (th[i][HOGANIO] != th[0][HOGANIO] || th[i][HOGTRIMESTRE] != th[0][HOGTRIMESTRE]) {
             return false;
         }
     }
 
     for (int j = 0; j < ti.size(); ++j) {
-        if (ti[j][INDANIO] != th[0][HOGANIO] && ti[j][INDTRIMESTRE] != th[0][HOGTRIMESTRE]) {
+        if (ti[j][INDANIO] != th[0][HOGANIO] || ti[j][INDTRIMESTRE] != th[0][HOGTRIMESTRE]) {
             return false;
         }
     }
@@ -365,6 +364,19 @@ bool trabaja(individuo i){
 
 bool hogarEsDeCiudadGrande(hogar h){
     return h[MAS_500]==1;
+}
+
+//Auxiliares Ej. 7
+void swapIndividuo(vector<individuo> &ti, int a, int b) {
+    individuo temp = ti[a];
+    ti[a] = ti[b];
+    ti[b] = temp;
+}
+
+void swapHogar(vector<hogar> &th, int a, int b) {
+    hogar temp = th[a];
+    th[a] = th[b];
+    th[b] = temp;
 }
 
 //Auxiliares Ej. 8
