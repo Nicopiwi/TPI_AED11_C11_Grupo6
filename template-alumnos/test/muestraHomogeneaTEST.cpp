@@ -107,3 +107,31 @@ TEST(muestraHomogeneaTEST, dosSolucionesDe3) {
     bool esperado = res1 == propuesto || res2 == propuesto;
     EXPECT_TRUE(esperado);
 }
+
+TEST(muestraHomogeneaTEST, NoHaySecuenciaConTresOMasElementos) {
+    vector <hogar> res = {};
+
+    eph_h th = {
+            {960,  2018, 1, 1, 1, 1, 1, 1, 1, 2,1,1},
+            {340,  2018, 1, 1, 1, 1, 1, 1, 1, 2,1,1},
+            {1009, 2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},
+            {210,  2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},
+            {4377, 2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},
+    };
+
+    eph_i ti = {{340,  2018, 1, 1, 1, 1, 36, 1,  3, 30,  1},  // 30
+                {340,  2018, 3, 1, 1, 1, 36, 1,  3, 0,  1},
+                {1009, 2018, 1, 1, 1, 1, 36, 1,  3, 26,  1}, // 26
+                {210,  2018, 1, 1, 1, 1, 36, 1,  3, 25,  1}, // 27
+                {210,  2018, 2, 1, 1, 1, 36, 1,  3, 2,  1},
+                {4377, 2018, 1, 1, 1, 1, 36, 1,  3, 15,  1}, // 30
+                {4377, 2018, 3, 1, 1, 1, 36, 1,  3, 15,  1},
+                {960,  2018, 3, 1, 1, 2, 51, 1,  4, 0,   1}, // 0
+                {960,  2018, 2, 1, 1, 2, 51, 1,  4, 0,   1},
+                {960,  2018, 1, 1, 1, 2, 51, 1,  4, 0,   1}};
+    EXPECT_TRUE(esEncuestaValida(th, ti));
+
+    vector <hogar> esperado = muestraHomogenea(th,ti);
+
+    EXPECT_EQ(res,esperado);
+}

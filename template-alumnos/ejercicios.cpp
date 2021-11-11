@@ -161,13 +161,9 @@ void ordenarRegionYCODUSU (eph_h & th, eph_i & ti) {
 
 // Implementacion Problema 8
 vector<hogar> muestraHomogenea (eph_h &th, eph_i &ti) {
-    if (th.size() < 3) {
-      return {};
-    }
-
     vector<hogar> secuenciaMasLarga = {};
     vector<hogar> secuenciaMasLargaActual;
-    int difIngresosActual;
+    int difIngresosActual = 0;
 
     for (int i = 0; i < th.size() - 1; ++i) {
         for (int j = i + 1; j < th.size() - 1; ++j) {
