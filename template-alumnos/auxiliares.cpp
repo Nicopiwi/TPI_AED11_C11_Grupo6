@@ -355,7 +355,7 @@ bool cumpleCondicionBusqueda(vector<pair<int, dato>> busqueda, individuo ind){
     return true;
 }
 
-
+//Pre: No hay hogares repetidos, y el HOGCODUSU es la unica condicion para que estén repetidos
 bool elHogarYaFueExcluido(hogar h, pair < eph_h, eph_i > excluidos){
     for (int j = 0; j < excluidos.first.size(); j++){
         if (excluidos.first[j][HOGCODUSU] == h[HOGCODUSU]) {

@@ -19,11 +19,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auxiliares.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/auxiliares.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auxiliares.h" beforeDir="false" afterPath="$PROJECT_DIR$/auxiliares.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/definiciones.h" beforeDir="false" afterPath="$PROJECT_DIR$/definiciones.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ejercicios.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ejercicios.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/creceElTeleworkingEnCiudadesGrandesTEST.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/creceElTeleworkingEnCiudadesGrandesTEST.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/esEncuestaValidaTEST.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/esEncuestaValidaTEST.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/histHabitacionalTEST.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/histHabitacionalTEST.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tpi" beforeDir="false" afterPath="$PROJECT_DIR$/tpi" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,6 +87,11 @@
         <option name="BeforeTestRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="gmock" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tpi" TARGET_NAME="gmock" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -109,11 +110,6 @@
     <configuration name="gtest_main" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tpi" TARGET_NAME="gtest_main" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <list>
@@ -150,6 +146,7 @@
       <workItem from="1636415852317" duration="158000" />
       <workItem from="1636416038208" duration="8351000" />
       <workItem from="1636479138828" duration="1545000" />
+      <workItem from="1636722024519" duration="94000" />
     </task>
     <servers />
   </component>
@@ -216,6 +213,5 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="../../../Documents/Algo I/TPI_AED11_C11_Grupo6/template-alumnos/cmake-build-debug" NAME="tpi Coverage Results" MODIFIED="1636597710992" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="gcov/llvm" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="../../../Documents/Algo I/TPI_AED11_C11_Grupo6/template-alumnos/cmake-build-debug" NAME="tpi Coverage Results" MODIFIED="1636662696307" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="gcov/llvm" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

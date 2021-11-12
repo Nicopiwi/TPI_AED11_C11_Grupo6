@@ -20,8 +20,6 @@ bool esMatriz(vector<vector<int>>);
 
 bool alMenosUnaFila(vector<vector<int>>);
 
-bool alMenosUnIndividuoEnEphi(eph_i ti);
-
 bool cantColumnasIgualACantEnTablaItem(eph_h th, eph_i ti);
 
 bool noHayIndividuosSinHogarYViceversa(eph_h th, eph_i ti);

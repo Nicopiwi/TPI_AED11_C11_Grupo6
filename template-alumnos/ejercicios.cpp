@@ -225,8 +225,8 @@ pair < eph_h, eph_i > quitarIndividuos(eph_i & ti, eph_h & th, vector < pair < i
     int i = 0;
     while (i < ti.size()){ //O(|s|)
         if (cumpleCondicionBusqueda(busqueda, ti[i])){ //O(1)
-            // La invariante mantiene que EsEncuestaValida(th, ti) para valores
-            //de i en el rango de [0, |s|)
+            // La invariante mantiene que (th, ti) y (resp.first, resp.second)
+            // son o bien encuestas válidas, o bien vacías.
             int hogarIndex = buscarIndiceHogarPara(th, ti[i]); //O(|s|)
             hogar suHogar = th[hogarIndex];
             individuo ind = ti[i];
